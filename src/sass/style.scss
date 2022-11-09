@@ -1,4 +1,19 @@
 body {
   font-family: sans-serif;
-  background-color: #f9f9f9;
+  background-color: #191b22;
+  color: #fff;
+}
+
+//  some slap-dash styles for a one-off note
+.quick-note {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #282c37;
+  line-height: 1.5;
+
+  a:link,
+  a:visited {
+    color: #4ea2df;
+  }
 }
