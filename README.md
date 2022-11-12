@@ -15,10 +15,14 @@ with help from current admins:
 
 ## Contributing
 
-For now,
-our instance is hosted by [Masto.host](https://masto.host/).
-That has many advantages,
-but it also means our customization options
+Mastodon itself is open source,
+and accepts contributions from the community:
+
+- https://github.com/mastodon/mastodon/
+
+For now, tho,
+our instance is hosted by [Masto.host](https://masto.host/) --
+which means our server customizations
 are limited:
 
 - [Server-wide CSS overrides](https://about.front-end.social/css/override.css)
