@@ -61,8 +61,7 @@ Use this as the "Publish command" if needed by hosting such as Netlify.
 
 ## Based on 11ty Sass Skeleton
 
-Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.
-
-Includes minifiying and autoprefixing of styles `postbuild` using [Lightning CSS](https://lightningcss.dev/). If you have different preferred browser targets, be sure to modify both the package `browserslist` and the value of `--target` within the `postbuild` script.
+Featuring absolutely nothing beyond a base HTML5 template
+and the essential setup to watch and compile your Sass alongside 11ty.
 
 <small>Created by [@5t3ph](https://twitter.com/5t3ph)</small>
