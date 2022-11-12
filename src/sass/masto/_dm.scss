@@ -1,0 +1,20 @@
+.status__wrapper-direct,
+.detailed-status-direct {
+  position: relative;
+  margin-inline-end: 1.5rem;
+}
+
+.detailed-status-direct::after,
+.status__wrapper-direct::after {
+  content: "private";
+  color: ghostwhite;
+  background-color: rebeccapurple;
+  display: inline-block;
+  padding: 0rem 0.2rem;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 100%;
+  writing-mode: vertical-rl;
+  height: 100%;
+  text-align: center;
+}

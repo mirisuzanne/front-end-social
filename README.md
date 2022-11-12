@@ -1,14 +1,49 @@
-![logo](https://repository-images.githubusercontent.com/302921248/58478900-0adf-11eb-8f0b-74be58a898ef)
+# Front-End Social
 
-# 11ty Sass Skeleton
+This repo includes:
 
-Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.
+- The Eleventy site published at [about.front-end.social](https://about.front-end.social/)
+- The Mastodon [style overrides](https://about.front-end.social/css/override.css) we use
 
-Includes minifiying and autoprefixing of styles `postbuild` using [Lightning CSS](https://lightningcss.dev/). If you have different preferred browser targets, be sure to modify both the package `browserslist` and the value of `--target` within the `postbuild` script.
+Created by [@mia](https://front-end.social/@mia),
+with help from current admins:
 
-<small>Created by [@5t3ph](https://twitter.com/5t3ph)</small>
+- [@estelle](https://front-end.social/@estelle)
+- [@keithjgrant](https://front-end.social/@keithjgrant)
+- [@grigs](https://front-end.social/@grigs)
+- [@kitt](https://front-end.social/@kitt)
+
+## Contributing
+
+For now,
+our instance is hosted by [Masto.host](https://masto.host/).
+That has many advantages,
+but it also means our customization options
+are limited:
+
+- [Server-wide CSS overrides](https://about.front-end.social/css/override.css)
+  (generated from Sass files in `src/sass/masto/`)
+- Various server-related images
+  (hero, social media, mascot)
+- Server description & and terms
+- List of blocked servers
+
+Feel free to open issues for discussion
+on any of the above,
+or other questions/suggestions --
+and open PRs with
+suggested changes to the server CSS.
+
+You can also
+support the server
+by donating to
+[buymeacoffee.com/terriblemia](https://buymeacoffee.com/terriblemia).
 
 ## Development Scripts
+
+**`npm install`**
+
+> Install the necessary npm packages for local development
 
 **`npm start`**
 
@@ -20,14 +55,10 @@ Includes minifiying and autoprefixing of styles `postbuild` using [Lightning CSS
 
 Use this as the "Publish command" if needed by hosting such as Netlify.
 
-## Resources to extend this and learn 11ty
+## Based on 11ty Sass Skeleton
 
-**Ensure accessible colors** by adding my [a11y-color-tokens package](https://www.npmjs.com/package/a11y-color-tokens)
+Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.
 
-**Learn to build an 11ty site in 20 mins** with my [egghead video course](https://5t3ph.dev/learn-11ty) and see how to add a blog and custom data.
+Includes minifiying and autoprefixing of styles `postbuild` using [Lightning CSS](https://lightningcss.dev/). If you have different preferred browser targets, be sure to modify both the package `browserslist` and the value of `--target` within the `postbuild` script.
 
-**Add auto-generated social media images** with [my plugin](https://www.npmjs.com/package/@11tyrocks/eleventy-plugin-social-images)
-
-**Explore advanced setup of custom data** through my [tutorial on building a community site](https://css-tricks.com/a-community-driven-site-with-eleventy-building-the-site/)
-
-**For a more full-featured starter** check out my [11ty Netlify Jumpstart](https://11ty-netlify-jumpstart.netlify.app/) (also works for hosts other than Netlify).
+<small>Created by [@5t3ph](https://twitter.com/5t3ph)</small>
