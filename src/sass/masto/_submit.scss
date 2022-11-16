@@ -1,0 +1,18 @@
+/* Highlights the publish button and the missing image message when there is a warning. */
+.compose-form:has(.compose-form__upload__warning) .compose-form__publish .button,
+.compose-form__upload__warning .icon-button {
+  border: medium dashed red;
+}
+
+/* Highlights the edit button to point towards the button that could fix the missing description issue. */
+.compose-form__upload-thumbnail:has(.compose-form__upload__warning) .compose-form__upload__actions .icon-button:has(.fa-pencil) {
+  border: medium dashed lime;
+}
+
+/* Adds an additional text message near the publish button when there is a missing description. */
+.compose-form:has(.compose-form__upload__warning) .compose-form__publish::before {
+  content: "Please, add an image description!";
+  align-self: center;
+  padding: 1em;
+  margin-top: 15px; /* Same as for the publish button to align properly. */
+}
