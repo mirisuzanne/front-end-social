@@ -1,0 +1,13 @@
+body {
+  --trans:
+    powderblue 1em,
+    pink 1em 2em,
+    white 2em 3em,
+    pink 3em 4em,
+    powderblue 4em 5em,
+    transparent 5em;
+  background-image: linear-gradient(
+    -0.375turn,
+    var(--trans)
+  );
+}
