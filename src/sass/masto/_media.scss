@@ -1,18 +1,34 @@
-.media-gallery__item-thumbnail img:not([alt]),
-.audio-player__canvas:not([title]),
-.video-player video:not([title]),
-.media-gallery__gifv video:not([title]) {
-  border: medium dashed red;
+/* A thin border for images showing alt text status */
+.media-gallery__item img {
+  border: thin solid red;
   box-sizing: border-box;
 }
 
-.media-gallery__item-thumbnail:has(img:not([alt]))::after {
-  content: 'No image description';
+.media-gallery__item img[alt] {
+  border-color: green;
+}
+
+/* Remove the border if we can do better with :has() */
+.media-gallery__item:has(img) img {
+  border: none;
+}
+
+/* Apply an alt-text badge using generated content */
+.media-gallery__item:has(img)::after {
   background: maroon;
+  border-radius: 3px;
   color: mistyrose;
+  content: "no alt";
   display: inline-block;
-  padding: 0.1rem 0.4rem;
+  inset-block-end: 0.5em;
+  inset-inline-start: 0.5em;
+  padding: 0.25rem 0.5rem;
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.media-gallery__item:has(img[alt])::after {
+  background: darkgreen;
+  content: "alt";
 }

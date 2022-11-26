@@ -1,23 +1,24 @@
-// Form highlights when media is missing description.
+/* Form highlights when media is missing description. */
+/* Originally contributed by @kizu */
 
-// The edit button (for fixing the error)
+/* The edit button (for fixing the error) */
 .compose-form__upload__actions:not(:last-child) .icon-button:last-child {
   background-color: darkgreen;
 }
 
-// The warning itself
+/* The warning itself */
 .compose-form__upload__warning button {
   background-color: maroon;
   text-align: left;
   width: 100%;
 }
 
-// The upload area
+/* The upload area */
 .compose-form__upload:has(.compose-form__upload__warning) {
   outline: medium dashed red;
 }
 
-// The form submission
+/* The form submission */
 .compose-form:has(.compose-form__upload__warning) {
   .compose-form__publish [type=submit] {
     border: medium solid red;
