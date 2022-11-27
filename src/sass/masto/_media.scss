@@ -1,18 +1,56 @@
-.media-gallery__item-thumbnail img:not([alt]),
-.audio-player__canvas:not([title]),
-.video-player video:not([title]),
-.media-gallery__gifv video:not([title]) {
-  border: medium dashed red;
-  box-sizing: border-box;
+/* show when images have alt text */
+.media-gallery__item {
+  --alt-crop-x: 6ch;
+  --alt-crop-y: 2em;
+  background: darkgreen;
+  color: white;
 }
 
-.media-gallery__item-thumbnail:has(img:not([alt]))::after {
-  content: 'No image description';
-  background: maroon;
-  color: mistyrose;
-  display: inline-block;
-  padding: 0.1rem 0.4rem;
+/* only revealed by cutaway when alt is defined */
+.media-gallery__item::after {
+  content: 'alt';
+  display: grid;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  min-height: var(--alt-crop-y);
+  min-width: var(--alt-crop-x);
+  place-content: center;
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+}
+
+/* cut away to reveal badge */
+.media-gallery__item img[alt] {
+  clip-path: polygon(
+    0 0, 100% 0,
+    100% 100%,
+    var(--alt-crop-x) 100%,
+    var(--alt-crop-x) calc(100% - var(--alt-crop-y)),
+    0 calc(100% - var(--alt-crop-y))
+  );
+}
+
+/* Remove the clip path if we can do better with :has() */
+.media-gallery__item:has(img) img[alt] {
+  clip-path: none;
+}
+
+/* Apply better alt-text badge over top of image */
+.media-gallery__item:has(img)::after {
+  --alt-crop-x: initial;
+  --alt-crop-y: initial;
+  background: darkgreen;
+  border: thin solid #fff6;
+  border-radius: 3px;
+  inset-block-end: 0.5em;
+  inset-inline-start: 0.5em;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Change badge when no alt is defined */
+.media-gallery__item:has(img:not([alt]))::after {
+  background: maroon;
+  content: "no alt";
 }
