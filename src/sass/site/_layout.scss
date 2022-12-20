@@ -1,0 +1,31 @@
+@layer layout {
+  body {
+    --page-margin: minmax(var(--gap), 1fr);
+    display: grid;
+    gap: var(--gap);
+    grid-template:
+      'banner banner banner' auto
+      '. main .' 1fr
+      'footer footer footer' auto
+      / var(--page-margin) minmax(min-content, 65ch) var(--page-margin)
+    ;
+  }
+
+  main {
+    grid-area: main;
+    padding: var(--gap);
+
+    > header {
+      --newline: 0.5rem;
+      margin-block-end: var(--spacer);
+    }
+  }
+
+  body > footer {
+    --newline: 0.5rem;
+    background-color: var(--shadow);
+    font-size: var(--small);
+    grid-area: footer;
+    padding: var(--gap);
+  }
+}

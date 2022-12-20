@@ -1,0 +1,58 @@
+@layer layout {
+  body > header {
+    align-items: center;
+    background-color: var(--shadow);
+    display: grid;
+    grid-area: banner;
+    grid-template: 'logo title' auto 'logo nav' auto / 5em 1fr;
+    padding: var(--gap);
+
+    @media (min-width: 40em) {
+      --justify-nav: end;
+      gap: var(--gap);
+      grid-template: 'logo title nav' auto / 6em auto 1fr;
+
+      .logo {
+        margin-block: -0.5em -2em;
+      }
+    }
+  }
+
+  .logo {
+    grid-area: logo;
+    transition: transform 150ms ease-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 40em) {
+      margin-block: -0.5em -2em;
+    }
+  }
+
+  nav:not(main nav) {
+    display: flex;
+    gap: var(--gap);
+    justify-self: var(--justify-nav);
+
+    @layer default {
+      a:link,
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:focus,
+      a:hover,
+      a:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  [aria-current='page'] {
+    color: var(--alt);
+  }
+}

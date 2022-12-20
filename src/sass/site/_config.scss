@@ -1,0 +1,49 @@
+@layer config {
+  html {
+    // source colors
+    --blue: #5aaeeb;
+    --peach: #ecaca6;
+    --purple: #6a4fa9;
+    --lavender: #cb99ca;
+    --pink: #bb5fb1;
+    --raspberry: #a93698;
+    --dark: #191b22;
+    --light: #fffdfe;
+
+    // applied colors
+    --bg: var(--dark);
+    --text: var(--light);
+    --accent: var(--lavender);
+    --alt: var(--blue);
+    --shadow: #0003;
+
+    // ------------
+    // source sizes
+    --body-em: clamp(1rem, 0.8rem + 0.5vw, 1.5rem);
+    --line-ratio: 1.4;
+    --line-height: calc(1em * var(--line-ratio));
+    --gap: var(--body-em);
+    --newline: var(--gap);
+    --spacer: calc(var(--gap) + 2vw);
+
+    --h1: 2em;
+    --h2: 1.5em;
+    --h3: 1.17em;
+    --h4: 1.00em;
+    --h5: 0.83em;
+    --h6: 0.67em;
+    --small: 1rem;
+
+    // ------------
+    // source fonts
+    --ui-mono: ui-monospace, sfmono-regular, consolas, monaco, monospace, serif;
+    --ui-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --ui-serif: ui-serif, palatino, palatino linotype, palatino lt std,
+      book antiqua, georgia, serif;
+
+    // applied fonts
+    --body-font: var(--ui-sans);
+    --heading-font: var(--ui-serif);
+    --code-font: var(--ui-mono);
+  }
+}

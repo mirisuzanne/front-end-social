@@ -1,0 +1,61 @@
+@layer base {
+  html {
+    accent-color: var(--accent);
+    background-color: var(--bg);
+    color: var(--text);
+    color-scheme: dark;
+    font-family: var(--body-font);
+    height: 100%;
+  }
+
+  body {
+    font-size: var(--body-em);
+    margin: 0;
+    min-height: 100%;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h4,
+  h6 {
+    font-family: var(--heading-font);
+    margin-block-start: var(--spacer);
+    margin-block-end: var(--newline);
+  }
+
+  h1 + p {
+    font-family: var(--heading-font);
+    font-style: italic;
+  }
+
+  h1 { font-size: var(--h1); }
+  h2 { font-size: var(--h2); }
+  h3 { font-size: var(--h3); }
+  h4 { font-size: var(--h4); }
+  h5 { font-size: var(--h5); }
+  h6 { font-size: var(--h6); }
+
+  a:link,
+  a:visited {
+    color: var(--accent);
+  }
+
+  a:focus,
+  a:hover,
+  a:active {
+    color: var(--alt);
+  }
+
+  p,
+  ul,
+  ol {
+    margin-block: var(--newline);
+  }
+}

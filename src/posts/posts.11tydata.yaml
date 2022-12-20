@@ -1,0 +1,4 @@
+permalink: "/posts/{{ page.date | date('url') }}/{{ page.fileSlug }}/index.html"
+layout: post.njk
+tags:
+  - post
