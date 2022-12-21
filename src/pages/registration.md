@@ -50,9 +50,8 @@ and we will see about getting some invites out.
 
 ### General Registration Process
 
-We are working to improve the application process
-with a few more questions
-directing new users to think in this regard as well.
+We are working to improve the application process,
+and hope to reopen slowly.
 If you are part of a marginalized group,
 and looking for a smaller/safer home base,
 feel free to reach out.
