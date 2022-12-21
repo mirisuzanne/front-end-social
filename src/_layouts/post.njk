@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+
+<header>
+	<h1>{{ title }}</h1>
+	{% if sub %}
+		<p>{{ sub }}</p>
+	{% endif %}
+	<time datetime="{{ page.date.toISOString() }}">
+		{{ page.date | date('post') }}
+	</time>
+</header>
+
+<div class="content">
+	{{ content | safe }}
+</div>

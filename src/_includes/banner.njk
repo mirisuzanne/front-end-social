@@ -1,0 +1,18 @@
+<header>
+  <a href="https://front-end.social" class="logo">
+    <span class="sr-only">community feed</span>
+    <img src="/images/raccoon-a.png" alt="purple racoon">
+  </a>
+  <strong class='site-title'>
+    {% if page.url == '/' %}
+      {{ site.title }}
+    {% else %}
+      <a href="/" rel="home">{{ site.title }}</a>
+    {% endif %}
+  </strong>
+  <nav>
+    {% for name, link in site.nav %}
+      <a href="{{ link | safe }}" {% if link == page.url %}aria-current="page"{% endif %}>{{ name }}</a>
+    {% endfor %}
+  </nav>
+</header>
