@@ -1,0 +1,59 @@
+@media screen and (max-width: 480px) {
+  .ui {
+    min-height: 100dvh;
+  }
+  .ui__header, h1.column-header, .column-header__buttons, .load-more {
+    height: 40px !important;
+  }
+  .ui__header__logo {
+    padding: 0 0 0 8px !important;
+  } 
+  .ui__header__links {
+    padding: 0 5px !important;
+    gap: 5px !important;
+  }
+  .ui__header__links .button, .load-more {
+    padding: 3px 10px !important;
+  }
+  .account__avatar {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .tabs-bar__wrapper {
+    top: 40px !important;
+  }
+  .column-header>button, .column-back-button {
+    padding: 10px 0 10px 10px !important;
+  }
+  .columns-area__panels {
+    display: revert !important;
+  }
+  .columns-area__panels__main {
+    width: 100% !important;
+  }
+  .columns-area__panels__pane__inner {
+    width: 100% !important;
+    height: 40px !important;
+    bottom: 0 !important;
+  }
+  .navigation-panel {
+    flex-direction: row !important;
+    height: 75px !important;
+    border-left: 0px !important;
+    border-top: 1px solid #393f4f !important;
+  }
+  .column-link {
+    width: calc(100vw / 7);
+    padding: 10px 0 0 !important;
+    text-align: center;
+  }
+  .column-link__icon {
+    margin-right: 0px !important;
+  }
+  .navigation-panel hr, .navigation-panel__legal hr {
+    display: none !important;
+  }
+  .scrollable, .compose-form {
+    margin-bottom: 40px !important;
+  }
+}
