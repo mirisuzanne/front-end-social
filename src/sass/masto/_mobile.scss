@@ -1,0 +1,59 @@
+@media screen and (max-width: 480px) {
+  .ui {
+    min-height: 100dvh;
+  }
+  .ui__header, h1.column-header, .column-header__buttons, .load-more {
+    height: 40px;
+  }
+  .ui__header__logo {
+    padding: 0 0 0 8px;
+  } 
+  .ui__header__links {
+    padding: 0 5px;
+    gap: 5px;
+  }
+  .ui__header__links .button, .load-more {
+    padding: 3px 10px;
+  }
+  .account__avatar {
+    width: 30px;
+    height: 30px;
+  }
+  .tabs-bar__wrapper {
+    top: 40px;
+  }
+  .column-header>button, .column-back-button {
+    padding: 10px 0 10px 10px;
+  }
+  .columns-area__panels {
+    display: revert;
+  }
+  .columns-area__panels__main {
+    width: 100%;
+  }
+  .columns-area__panels__pane__inner {
+    width: 100% !important;
+    height: 40px;
+    bottom: 0;
+  }
+  .navigation-panel {
+    flex-direction: row;
+    height: 75px;
+    border-left: 0px;
+    border-top: 1px solid #393f4f;
+  }
+  .column-link {
+    width: calc(100vw / 7);
+    padding: 10px 0 0;
+    text-align: center;
+  }
+  .column-link__icon {
+    margin-right: 0px;
+  }
+  .navigation-panel hr, .navigation-panel__legal hr {
+    display: none;
+  }
+  .scrollable, .compose-form {
+    margin-bottom: 40px;
+  }
+}
